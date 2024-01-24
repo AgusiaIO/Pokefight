@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.c_flex-center {
+  @apply flex items-center justify-center;
+}
+
+.c_moves {
+  @apply transition-transform duration-300 group-hover:scale-110 group-hover:fill-white/40;
+}
+
+.c_progressbar {
+  @apply c_flex-center h-6 rounded-lg text-blue-100;
+}
