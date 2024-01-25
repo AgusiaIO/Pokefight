@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { MoveList } from "./MoveList";
 import { Progressbar } from "./Progressbar";
 import { DataContext } from "../../context/DataContext";
-export const Card = () => {
+
+export const Card: React.FC = () => {
   const pokemonData = useContext(DataContext);
   const { exName, exId, inHealth, exHealth, inExperience, exExperience } =
     pokemonData;

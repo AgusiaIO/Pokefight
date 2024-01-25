@@ -1,9 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
-export const Modal: React.FC<{
-  isOpenModal: boolean;
-  setIsOpenModal: (isOpenModal: boolean) => void;
-}> = ({ isOpenModal, setIsOpenModal }) => {
+import { Fragment, useContext } from "react";
+import { CardContext } from "../../context/CardContext";
+export const Modal: React.FC = () => {
+  const { isOpenModal, setIsOpenModal } = useContext(CardContext);
   return (
     <>
       <Transition appear show={isOpenModal} as={Fragment}>
@@ -40,12 +39,13 @@ export const Modal: React.FC<{
                     as="h3"
                     className="text-lg font-medium leading-6 text-blue-500 "
                   >
-                    Payment successful
+                    Wybierz albo giń!
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-dark_text">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Exercitationem laborum quas amet beatae mollitia sapiente
+                      asperiores id, eaque aperiam quo!
                     </p>
                   </div>
                 </Dialog.Panel>

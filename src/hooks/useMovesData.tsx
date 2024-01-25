@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_BASE_URL } from "../constants/constants";
+// import { API_BASE_URL } from "../constants/constants";
 import { usePokemonData } from "./usePokemonData";
 import { Moves } from "../interfaces/interface";
 export const useMovesData = () => {
@@ -12,8 +12,8 @@ export const useMovesData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(API_BASE_URL);
-        const data = await res.json();
+        // const res = await fetch(API_BASE_URL);
+        // const data = await res.json();
         // setExPokemon(data);
         setIsLoading(false);
       } catch (error) {
