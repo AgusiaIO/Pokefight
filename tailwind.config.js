@@ -19,6 +19,16 @@ export default {
     minHeight: {
       screen: "100svh",
     },
+
+    keyframes: {
+      toLeft: {
+        "0%": { opacity: "100" },
+        "100%": { opacity: "0" },
+      },
+    },
+    animation: {
+      toLeft: "toLeft 1s both",
+    },
   },
   plugins: [],
 };
