@@ -1,18 +1,30 @@
 // Card.tsx
 // import { DataContextProvider, useDataContext } from "./DataContext";
+
 import { useContext } from "react";
+
+import { DataContext } from "../../context/DataContext";
 import { MoveList } from "./MoveList";
 import { Progressbar } from "./Progressbar";
-import { DataContext } from "../../context/DataContext";
 
+// interface X{
+//   exName:any;
+//   exId:any;
+//   inHealth:any;
+//   exHealth:any;
+//   inExperience:any;
+//   exExperience:any
+// }
 export const Card: React.FC = () => {
-  const pokemonData = useContext(DataContext);
-  const { exName, exId, inHealth, exHealth, inExperience, exExperience } =
-    pokemonData;
+  // const { exName, exId, inHealth, exHealth, inExperience, exExperience }= useContext(DataContext);
+  // const { exName, exId, inHealth, exHealth, inExperience, exExperience }:X =
+  //   pokemonData;
   // useEffect(() => {
   //   setInExperience(0);
   //   setInHealth(0);
   // }, [setInExperience, setInHealth]);
+
+  const {exName, exId, inHealth, exHealth, inExperience, exExperience}=useContext(DataContext)
   return (
     <div className="mx-auto grid w-full max-w-96 gap-3 rounded-xl border-2 border-dark_cardBorder bg-dark_card p-3 md:max-w-md lg:p-5">
       <p className="c_flex-center col-[1] rounded-xl bg-dark_bg p-1.5 text-center text-2xl">

@@ -1,3 +1,7 @@
 import { createContext } from "react";
 
-export const CardContext = createContext({});
+interface X {
+  isOpenModal: any;
+  setIsOpenModal: any;
+}
+export const CardContext = createContext({} as X);
