@@ -1,3 +1,20 @@
 import { createContext } from "react";
 
-export const DataContext = createContext({});
+import { usePokemonData } from "../hooks/usePokemonData";
+
+interface X{
+    exName:any;
+    exId:any;
+    inHealth:any;
+    exHealth:any;
+    inExperience:any;
+    exExperience:any
+  }
+export const DataContext = createContext({}     as X
+    );
+
+// export const PokemonContextProvider=()=>{
+//     const {exName, exId, inHealth, exHealth, inExperience, exExperience}=usePokemonData()
+
+//     return
+// }
