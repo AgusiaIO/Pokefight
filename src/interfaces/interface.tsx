@@ -1,31 +1,30 @@
-export interface Pokemon {
-  id: number;
-  base_experience: number;
-  name: string;
-  height: number;
-  weight: number;
-  stats: {
-    base_stat: number;
-  }[];
-  moves: [];
+export interface internalExternalData {
+  external: number;
+  internal: number;
 }
 
-export interface Moves {
-  move: {
-    name: string;
-    url: string;
-  };
-  version_group_details: [
-    {
-      level_learned_at: number;
-      move_learn_method: {
-        name: string;
-        url: string;
-      };
-      version_group: {
-        name: string;
-        url: string;
-      };
-    },
-  ];
+export interface Pokemon {
+  id: number;
+  name: string;
+  exp: internalExternalData;
+  weight: number;
+  height: number;
+  health: internalExternalData;
+  attack: number;
+  defense: number;
+  specialAttack: number;
+  specialDefense: number;
+  speed: number;
+  moves: Move[];
 }
+
+export interface Move {
+  move: {
+    url: string;
+    name: string;
+  };
+}
+
+export interface FilteredPokemonFromAll {
+  name: string;
+} // useAllPokemons

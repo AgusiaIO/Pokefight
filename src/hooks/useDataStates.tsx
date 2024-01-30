@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-export const useDataStates = () => {
-  const [isOpenModal, setIsOpenModal] = useState(true);
-  return { isOpenModal, setIsOpenModal };
-};
+// export const useDataStates = () => {
+//   const [isOpenModal, setIsOpenModal] = useState(false);
+//   return { isOpenModal, setIsOpenModal };
+// };

@@ -1,18 +1,14 @@
 import React from "react";
-interface ProgressbarProps {
-  variant: string;
-  externalData: number;
-  internalData: number;
-}
 
-export const Progressbar: React.FC<ProgressbarProps> = ({
-  variant,
-  internalData,
-  externalData,
-}) => {
+export const Progressbar: React.FC<{
+  variant: string;
+  internalData: number;
+  externalData: number;
+}> = ({ variant, internalData, externalData }) => {
   const progressValue = parseInt(
     ((internalData / externalData) * 100).toFixed(2),
   );
+  console.log(internalData, externalData, progressValue);
 
   const getClasses = () => {
     switch (variant) {

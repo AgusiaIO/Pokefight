@@ -1,48 +1,52 @@
-import { useEffect, useState } from "react";
-// import { API_BASE_URL } from "../constants/constants";
-import { usePokemonData } from "./usePokemonData";
-import { Moves } from "../interfaces/interface";
-export const useMovesData = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const { exMoves } = usePokemonData();
-  // External Data - API
-  const moveNames = exMoves as Moves[];
-  console.log(moveNames.map((move) => move.move.url));
+// import { useEffect, useState } from "react";
+// // import { API_BASE_URL } from "../constants/constants";
+// // import { usePokemonData } from "./usePokemonData";
+// // import { Moves } from "../interfaces/interface";
+// import {
+//   attackMove,
+//   specialAttackMove,
+//   defenseMove,
+//   specialDefenseMove,
+// } from "../constants/constants";
+// export const useMovesData = () => {
+//   const [isLoading, setIsLoading] = useState(true);
+//   // const { exMoves, setExMoves } = usePokemonData();
+//   // const [inMoves, setInMoves] = useState("sa");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // const res = await fetch(API_BASE_URL);
-        // const data = await res.json();
-        // setExPokemon(data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error(`Error: ${error}`);
-        setIsLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+//   // External Data - API
 
-  useEffect(() => {
-    if (!isLoading) {
-      //   setExId(exPokemon.id);
-      //   setExExperience(exPokemon.base_experience);
-      //   setExName(
-      //     exPokemon.name.slice(0, 1).toLocaleUpperCase() +
-      //       exPokemon.name.slice(1),
-      //   );
-      //   setExHeight(exPokemon.height);
-      //   setExWeight(exPokemon.weight);
-      //   setExHealth(exPokemon.stats[0].base_stat);
-      //   setExAttack(exPokemon.stats[1].base_stat);
-      //   setExDefense(exPokemon.stats[2].base_stat);
-      //   setExSpecialAttack(exPokemon.stats[3].base_stat);
-      //   setExSpecialDefense(exPokemon.stats[4].base_stat);
-      //   setExSpeed(exPokemon.stats[5].base_stat);
-      //   setInHealth(exPokemon.stats[0].base_stat);
-      //   setInExperience(exPokemon.base_experience);
-    }
-  }, [isLoading]);
-  return {};
-};
+//   const [attackMoves, setAttackMoves] = useState([]);
+//   const [defenseMoves, setDefenseMoves] = useState([]);
+//   const [specialAttackMoves, setSpecialAttackMoves] = useState([]);
+//   const [specialDefenseMoves, setSpecialDefenseMoves] = useState([]);
+//   // const moveNames = exMoves.map((move) => move.move.name);
+//   // const moveObj = exMoves.map((move) => move);
+//   // const moveURL = exMoves.map((move) => move.move.url);
+//   // console.log(moveURL);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const resAttack = await fetch(attackMove);
+//         const resDefense = await fetch(defenseMove);
+//         const resSpecialAttack = await fetch(specialAttackMove);
+//         const resSpecialDefense = await fetch(specialDefenseMove);
+//         const resAttackData = await resAttack.json();
+//         const resDefenseData = await resDefense.json();
+//         const resSpecialAttackData = await resSpecialAttack.json();
+//         const resSpecialDefenseData = await resSpecialDefense.json();
+//         setAttackMoves(resAttackData.moves);
+//         setDefenseMoves(resDefenseData.moves);
+//         setSpecialDefenseMoves(resSpecialDefenseData.moves);
+//         setSpecialAttackMoves(resSpecialAttackData.moves);
+//         setIsLoading(false);
+//       } catch (error) {
+//         console.error(`Error: ${error}`);
+//         setIsLoading(false);
+//       }
+//     };
+//     fetchData();
+//   }, []);
+
+//   return { attackMoves, specialDefenseMoves, specialAttackMoves, defenseMoves };
+// };

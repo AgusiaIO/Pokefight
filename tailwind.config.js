@@ -12,22 +12,21 @@ export default {
         dark_cardBorder: "#222",
         // Light
       },
+      // keyframes: {
+      //   toLeft: {
+      //     "0%, 100%": { transform: "translateX(0)" },
+      //     "50%": { transform: "translateX(200%)" },
+      //   },
+      // },
+      // animation: {
+      //   toLeft: "toLeft 1s both",
+      // },
     },
     container: {
       center: true,
     },
     minHeight: {
       screen: "100svh",
-    },
-
-    keyframes: {
-      toLeft: {
-        "0%": { opacity: "100" },
-        "100%": { opacity: "0" },
-      },
-    },
-    animation: {
-      toLeft: "toLeft 1s both",
     },
   },
   plugins: [],

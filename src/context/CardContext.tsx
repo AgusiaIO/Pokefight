@@ -1,7 +1,8 @@
-import { createContext } from "react";
-
-interface X {
-  isOpenModal: any;
-  setIsOpenModal: any;
-}
-export const CardContext = createContext({} as X);
+// import { createContext } from "react";
+// // import { Moves } from "../interfaces/interface";
+// interface X {
+//   repeatedValues: string[];
+//   isOpenModal: any;
+//   setIsOpenModal: any;
+// }
+// export const CardContext = createContext({} as X);

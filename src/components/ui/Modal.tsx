@@ -2,7 +2,9 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useContext } from "react";
 import { CardContext } from "../../context/CardContext";
 export const Modal: React.FC = () => {
-  const { isOpenModal, setIsOpenModal } = useContext(CardContext);
+  const { repeatedValues, isOpenModal, setIsOpenModal } =
+    useContext(CardContext);
+
   return (
     <>
       <Transition appear show={isOpenModal} as={Fragment}>
@@ -23,7 +25,7 @@ export const Modal: React.FC = () => {
             <div className="fixed inset-0 bg-black/25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0  overflow-y-auto">
             <div className="min-h-full flex items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -41,12 +43,12 @@ export const Modal: React.FC = () => {
                   >
                     Wybierz albo giń!
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-dark_text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Exercitationem laborum quas amet beatae mollitia sapiente
-                      asperiores id, eaque aperiam quo!
-                    </p>
+                  <div className="mt-2 flex flex-wrap gap-x-1">
+                    {repeatedValues.map((move, id) => (
+                      <p key={id} className="text-sm text-dark_text">
+                        {move}
+                      </p>
+                    ))}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
